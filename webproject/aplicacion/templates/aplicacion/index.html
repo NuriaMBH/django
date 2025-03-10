@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina de Inicio</title>
-</head>
-<body>
-    <h1>Mi primera plantilla Django con HTML</h1>
-    <h3>Titulo con tamaño 3</h3>
-</body>
-</html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Pagina de inicio App</title>
+ </head>
+ <body>
+     <a href="https://www.marca.com">Ir al marca...</a>
+     <a href="#">Home</a>
+     <a href="viernes/">Ir al viernes</a>
+     <h1>Mi primera página Django con HTML</h1>
+     {% include 'aplicacion/menu.html' %}
+     <h1 style="color:blue">Mi primera página Django con HTML</h1>
+     <h3>Título con tamaño 3</h3>
+ </body>
+ </html>

@@ -3,6 +3,7 @@ from aplicacion import views
 # lo que quiero que el usuario escriba
 urlpatterns=[
     path('',views.index, name='index'),
-    path('viernes/',views.metodoviernes, name='viernes')
+    path('viernes/',views.metodoviernes, name='viernes'),
+    path('peli/',views.paginapeliculas,name='peli')
 ]
 #http://127.0.0.1:8000/ tengo que poner viernes/
