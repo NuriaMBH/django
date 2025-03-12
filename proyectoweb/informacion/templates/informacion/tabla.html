@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     
+     <title>Document</title>
+ </head>
+ <body>
+
+    {%include 'informacion/menu.html'%}
+     <h1> Tabla de Multiplicar</h1>
+   
+     <form method="post">
+        {%csrf_token%}
+        <label>Introduzca el primer número:</label>
+       <input type="number1" name="cajanumero1" required/><br/>
+       <label>Introduzca el segundo número:</label>
+       <input type="number2" name="cajanumero2" required/><br/>
+    <button>
+        Mostrar tabla
+    </button>
+    </form> 
+    <table border="1">
+        <tr>
+            <th>OPERACION</th>
+            <th>RESULTADO</th>
+        </tr>    
+
+    <ul>
+        <h2> Resultado</h2>   
+        {%for dato in listaTabla%}
+        <tr>
+            <td>{{dato.operacion}}</td>
+            <td>{{dato.resultado}}</td>
+        </tr> 
+        {%endfor%}
+      
+    </ul>
+        
+
+        
+     </body>
+    </html>
