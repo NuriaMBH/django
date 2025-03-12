@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     
+     <title>Document</title>
+ </head>
+ <body>
+    {%include 'informacion/menu.html'%}
+     <h1> Pagina de Saludo</h1>
+     <form method="post">
+     
+        {%csrf_token%}
+        <label>Introduzca su nombre</label>
+        <input type="text" name"cajanombre"/>
+     <br/>
+     
+    <button>
+     Enviar datos
+    </button>
+</form>
+<h1 style="color:blue">
+    Bienvenido a mi pagina , Sr/Sra{{nombre}}
+     
+ </body>
+ </html>

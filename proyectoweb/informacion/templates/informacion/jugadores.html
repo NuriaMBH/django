@@ -6,8 +6,27 @@
  </head>
  <body>
      
-     {% include 'aplicacion/menu.html' %}
+     {% include 'informacion/menu.html' %}
      <h1> Jugadores</h1>
+     
+     <!--RECORREMOS TODOS LOS NUMEROS QUE RECIBIMOS-->
+    <!--PARA LOGICA-->
     
+     <table border="1"> 
+        <tr>
+            <!-- para escribir el nombre de las columnas en negrita th-->
+            <th>NOMBRE</th>
+            <th>DEMARCACION</th>
+            <th>CAMISETA</th>
+        </tr>
+        {%for valor in jugadores%}
+        <tr>
+            <td>{{valor.Nombre}}</td>
+            <td>{{valor.Demarcacion}}</td>
+            <td>{{valor.Numero}}</td>
+        </tr>
+        {%endfor%}
+
+        </table>
  </body>
  </html>
