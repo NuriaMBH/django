@@ -13,4 +13,3 @@ urlpatterns= [
     path ('tabla/',views.tablaMultiplicar, name='tabla')
     path('insertar/', views.insertarDepartamentos, name='insertar'),    
 ]    
-]

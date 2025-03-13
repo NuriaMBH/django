@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <body>
+         
+     {%include 'pages/menu.html'%}
+     <h1>Hospitales</h1>
+     <table border="1">
+    <tr>
+        <th>Idhospital</th>
+        <th>nombre</th>
+        <th>direccion</th>
+    </tr>
+     {%for h in hospitales%}
+     <tr>
+        <th>{{h.Idhospital}}</th>
+        <th>{{h.nombre}}</th>
+        <th>{{h.direccion}}</th>
+    </tr>
+
+     {%endfor%}
+</table>
+ </body>
+ </html>
