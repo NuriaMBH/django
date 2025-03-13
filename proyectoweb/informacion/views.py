@@ -93,27 +93,38 @@ def collatz(request):
     else:
         return render(request, "informacion/collatz.html")
 
+
 def tablaMultiplicar(request):
-   
-    if('cajanumero1' in request.POST):
-        dato=request.POST["cajanumero"]
+    if ('cajanumero' in request.POST):
+        dato = request.POST["cajanumero"]
         numero = int(dato)
         listaTabla = []
-        for i in range(11):
-            resultado =numero * (i +1)
-            operacion = str(numero)+"*"+str((i+1))
-            listaTabla.append ({
-                "operacion": "operacion",
-                "resultado": "resultado"})
+        for i in range(10):
+            resultado = numero * (i + 1) 
+            operacion = str(numero) + " * " + str((i + 1))
+            listaTabla.append({
+                "operacion": operacion,
+                "resultado": resultado
+            })
         context = {
-            "listaTabla":listaTabla
+            "listatabla": listaTabla
         }
-            
-        return render(request, "informacion/tabla.html",context)   
-    else
-        return render(request, "informacion/tabla.html")  
-     
-   
+        return render(request, 'informacion/tabla.html', context)
+    else:
+        return render(request, 'informacion/tabla.html')
     
-    
-    
+def insertarDepartamentos(request):
+    #PREGUNTAMOS DE FORMA OBLIGATORIA SI HEMOS
+    #RECIBIDO DATOS DEL FORMULARIO
+    if ('cajanombre' in request.POST):
+        nombre = request.POST['cajanombre']
+        numero = request.POST['cajanumero']
+        localidad = request.POST['cajalocalidad']
+        servicio = ServiceDepartamentos();
+        registros = servicio.insertarDepartamento(numero, nombre, localidad);
+        context = {
+            "insertados": registros
+        }
+        return render(request, 'informacion/insertar.html', context)
+    else:
+        return render(request, 'informacion/insertar.html')
