@@ -1,0 +1,7 @@
+<script>start("/Users/tardes/Documents/django/proyectochulo/");</script>
+<script>onHasParentDirectory();</script>
+<script>addRow("proyectochulo","proyectochulo",1,288,"288 B",1742229826,"17/3/25, 17:43:46");</script>
+<script>addRow("television","television",1,448,"448 B",1742234804,"17/3/25, 19:06:44");</script>
+<script>addRow(".DS_Store",".DS_Store",0,6148,"6.0 kB",1742234804,"17/3/25, 19:06:44");</script>
+<script>addRow("db.sqlite3","db.sqlite3",0,0,"0 B",1742228560,"17/3/25, 17:22:40");</script>
+<script>addRow("manage.py","manage.py",0,669,"669 B",1742228377,"17/3/25, 17:19:37");</script>
